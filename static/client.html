@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Client</title>
+</head>
+<body>
+
+
+<label for="text_body">Submit a Text and get Document Id from the DB</label>
+<form action="/submit_text" method="post">
+    <textarea  type="text" name="text_body" rows="4" cols="50" placeholder="Copy text here...">  </textarea>
+    <input type="submit" value="Submit text">
+</form>
+
+<p><strong>Document Id: </strong> {{ txt_id }}</p>
+
+
+<br><br><hr style="width:50%;text-align:left;margin-left:0"><br><br>
+
+
+
+<label for="text_id">Get Text Summary by Id</label>
+<form action="/submit_id" method="post">
+    <input type="number" min="1" name="text_id" placeholder="Id goes here..."/>
+    <input type="submit" value="Submit Id">
+</form>
+
+<p> <strong>Text Summary: </strong> {{ txt_summary }}</p>
+
+
+</body>
+</html>
